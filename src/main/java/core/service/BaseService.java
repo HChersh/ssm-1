@@ -6,7 +6,7 @@ import core.mapper.IBaseMapper;
  *  create by Liujishuai on 2015年9月22日
 
  */
-public abstract   class BaseService<T> implements IBaseService<T> {
+public abstract class BaseService<T> implements IBaseService<T> {
 	public abstract IBaseMapper<T> getBaseMapper();
 
 	@Override

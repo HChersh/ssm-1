@@ -2,8 +2,17 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<form action="hello" >
-<input type="submit" name="id" value="提交"/>
-</form>
+	<form action="user/getById" method="post">
+	   <input type="text" name="id"/>
+	   <br/>
+	   <input type="submit" name="submit" value="user/getById"/>
+	</form>
+	<br/>
+	
+	<form action="user/test" method="post">
+	   <input type="text" name="id"/>
+	   <br/>
+	   <input type="submit" name="submit" value="user/test"/>
+	</form>
 </body>
 </html>

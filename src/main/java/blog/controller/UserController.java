@@ -216,4 +216,14 @@ public class UserController extends BaseController {
 		userService.addRole(roleName);
 		return AjaxResult.getOK();
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/test", method = RequestMethod.POST)
+	public ModelAndView test(Integer id,HttpServletRequest request){
+		ModelAndView mv = new ModelAndView();
+		User user = userService.selectByPrimaryKey(id);
+		mv.addObject("user",user);
+		mv.setViewName("test");
+		return mv;
+	}
 }

@@ -87,4 +87,8 @@ public interface IUserService extends IBaseService<User> {
 	 * @param roleName 角色信息
 	 */
 	public void addRole(String roleName);
+	/*
+	 * 获取全部用户
+	 */
+	public List<User> getAllUser();
 }

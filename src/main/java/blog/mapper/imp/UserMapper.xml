@@ -139,4 +139,7 @@
 	<select id="getByUserName" parameterType="java.lang.String" resultType="blog.dao.User">
 	 select * from b_user where name=#{username}
 	</select>
+	<select id="getAllUser" resultType="blog.dao.User">
+	 select * from b_user
+	</select>
 </mapper>

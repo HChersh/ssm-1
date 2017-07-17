@@ -21,4 +21,6 @@ public interface UserMapper extends IBaseMapper<User> {
    public Integer getUserNameCount(String username);
    //根据用户名查询
    public User getByUserName(String username);
+   //获取全部用户
+   public List<User> getAllUser();
 }

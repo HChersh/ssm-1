@@ -14,5 +14,13 @@
 	   <br/>
 	   <input type="submit" name="submit" value="user/test"/>
 	</form>
+	<br/>
+	
+	<form action="user/getAllUser" method="post">
+	   <input type="text" name="id"/>
+	   <br/>
+	   <input type="submit" name="submit" value="user/testGetAllUser"/>
+	</form>
+	<br/>
 </body>
 </html>

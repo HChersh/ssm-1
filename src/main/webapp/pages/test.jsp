@@ -31,5 +31,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     tel:${user.tel}<br/>
     address:${user.address}<br/>
     ${user}
+    <br/><br/>
+          测试getAllUser:<br/>
+    ${users}
+    
   </body>
 </html>

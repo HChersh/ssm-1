@@ -226,4 +226,14 @@ public class UserController extends BaseController {
 		mv.setViewName("test");
 		return mv;
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/getAllUser", method = RequestMethod.POST)
+	public ModelAndView testCollection(HttpServletRequest request){
+		ModelAndView mv = new ModelAndView();
+		List<User> users = userService.getAllUser();
+		mv.addObject("users",users);
+		mv.setViewName("test");
+		return mv;
+	}
 }

@@ -212,5 +212,9 @@ public class UserService extends BaseService<User> implements IUserService {
 	public List<Integer> getUserRoleList(Integer userId) {
 		return userRoleMapper.getRoleIdListByUserId(userId);
 	}
+	
+	public List<User> getAllUser(){
+        return userMapper.getAllUser();
+	}
 
 }

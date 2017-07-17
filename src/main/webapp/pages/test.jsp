@@ -3,6 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -23,7 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-           欢迎测试：                                                 <br/><br/><br/>
+           欢迎测试:${empty user==true?"<a href='http://www.baidu.com'>请登录<a/>":user.name} 
+           ${empty user==true?"":"欢迎你"}                                <br/><br/><br/>
            用户信息:<br/>
     userid:${user.id}<br/>
     username:${user.name}<br/>
@@ -33,7 +35,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     ${user}
     <br/><br/>
           测试getAllUser:<br/>
-    ${users}
-    
+   <!--  ${users}--> 
+   <table border="1"> 
+	   <c:forEach items="${users}" var="user">
+	    <tr>
+	        <td align="center">${user.id}</td>
+	        <td align="center">${user.name}</td>
+	 		<td align="center">${user.des}</td>
+	        <td align="center">${user.tel}</td>           
+	     </tr>
+	   </c:forEach>
+	</table>
   </body>
 </html>
